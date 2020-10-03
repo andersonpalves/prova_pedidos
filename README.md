@@ -10,7 +10,7 @@ Os dados do vendedor têm o formato id 001​ e a linha terá o seguinte formato
 
 * 001çCPFçNameçSalary
 
-##Dados do cliente
+## Dados do cliente
 Os dados do cliente têm o formato id 002​ e a linha terá o seguinte formato.
 
 * 002 çCNPJçNameçBusiness Area
