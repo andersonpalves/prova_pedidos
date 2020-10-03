@@ -8,17 +8,21 @@ Para cada tipo de dados há um layout diferente.
 ## Dados do vendedor
 Os dados do vendedor têm o formato id 001​ e a linha terá o seguinte formato.
 
-001çCPFçNameçSalary
+* 001çCPFçNameçSalary
 
 ##Dados do cliente
 Os dados do cliente têm o formato id 002​ e a linha terá o seguinte formato.
 
-002 çCNPJçNameçBusiness Area
+* 002 çCNPJçNameçBusiness Area
 
 ## Dados de vendas
-Os dados de vendas têm o formato id 003​. Dentro da linha de vendas, existe a lista de itens, que é envolto por colchetes []. A linha terá o seguinte formato. 003çSale IDç[Item ID-Item Quantity-Item Price]çSalesman name
+Os dados de vendas têm o formato id 003​. Dentro da linha de vendas, existe a lista de itens, que é envolto por colchetes []. 
 
-##Dados de Exemplo
+A linha terá o seguinte formato. 
+
+* 003çSale IDç[Item ID-Item Quantity-Item Price]çSalesman name
+
+## Dados de Exemplo
 O seguinte é um exemplo dos dados que o sistema deve ser capaz de ler.
 
 * 001ç1234567891234çPedroç50000
