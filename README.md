@@ -11,6 +11,11 @@ Após a criação destas pastas, deve ser executada a aplicação e copiar o arq
 Ao realizar o donwload da aplicação, a maquina deverá conter o gerenciador de dependencias Maven instalado e executar o seguinte comando:
 ## mvn clean install
 
+# Pré requisitos:
+* Java 8
+* Maven
+* Junit
+
 # Teste para Desenvolvedor
 Você deve criar um sistema de análise de dados, onde o sistema deve importar lotes de arquivos, ler e analisar os dados e produzir um relatório.
 
