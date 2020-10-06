@@ -1,10 +1,26 @@
 package com.invoice.factory;
 
 import com.invoice.entity.Client;
+import org.junit.After;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
+import java.util.logging.Logger;
+
 public class ClientFactoryTest {
+
+    private static final Logger LOGGER = Logger.getLogger(String.valueOf(ClientFactoryTest.class));
+
+    @Before
+    public void setup() {
+        LOGGER.info("Iniciando a execução dos testes da Classe Client");
+    }
+
+    @After
+    public void finish() {
+        LOGGER.info("Iniciando a execução dos testes da Classe Client");
+    }
 
     @Test
     public void testCreateClient() {

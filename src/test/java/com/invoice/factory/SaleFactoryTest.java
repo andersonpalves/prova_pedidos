@@ -2,13 +2,28 @@ package com.invoice.factory;
 
 import com.invoice.entity.Sale;
 import com.invoice.entity.SaleItem;
+import org.junit.After;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 public class SaleFactoryTest {
+
+    private static final Logger LOGGER = Logger.getLogger(String.valueOf(ClientFactoryTest.class));
+
+    @Before
+    public void setup() {
+        LOGGER.info("Iniciando a execução dos testes da Classe Sale");
+    }
+
+    @After
+    public void finish() {
+        LOGGER.info("Iniciando a execução dos testes da Classe Sale");
+    }
 
     @Test
     public void testCreateSale() {

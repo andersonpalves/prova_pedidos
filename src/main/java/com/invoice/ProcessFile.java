@@ -14,6 +14,7 @@ import java.nio.file.WatchEvent;
 import java.nio.file.WatchKey;
 import java.nio.file.WatchService;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class ProcessFile {
 
@@ -24,8 +25,10 @@ public class ProcessFile {
     public static final String FORMAT_FILE_DAT = ".dat";
     public static final String FORMAT_FILE_DONE_DAT = ".done.dat";
     public static final int FORMAT_SIZE = 4;
+    public static final Logger LOGGER = Logger.getLogger(String.valueOf(ProcessFile.class));
 
     public static void main(String[] args) throws IOException, InterruptedException {
+        LOGGER.info("Sistema em execução");
 
         WatchService watchService = FileSystems.getDefault().newWatchService();
         Path inPath = Paths.get(System.getProperty(USER_HOME).concat(File.separator).concat(DATA).concat(File.separator).concat(IN));
@@ -42,7 +45,7 @@ public class ProcessFile {
                 String filename = watchEvent.context().toString();
 
                 if (FORMAT_FILE_DAT.equalsIgnoreCase(filename.substring(filename.length() - FORMAT_SIZE))) {
-
+                    LOGGER.info("Iniciando processo de leitura dos dados.");
                     Path inputFilePath = inPath.resolve((Path) watchEvent.context());
                     Path outputFilePath = outPath.resolve(filename.replace(FORMAT_FILE_DAT, FORMAT_FILE_DONE_DAT));
                     List<String> lines = Files.readAllLines(inputFilePath);
@@ -50,12 +53,14 @@ public class ProcessFile {
                     service.registerAll(lines);
 
                     try (BufferedWriter writer = Files.newBufferedWriter(outputFilePath)) {
+                        LOGGER.info("Executando processo de escrita dos dados.");
                         writer.write(service.getaAllDataReport());
                     }
                 }
             }
 
             watchKey.reset();
+            LOGGER.info("Finalizando processo.");
         }
     }
 }

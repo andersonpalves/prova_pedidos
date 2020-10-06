@@ -5,7 +5,7 @@ O sistema deve ler um tipo de dado em um formato especifico e realizar um proces
 #### \Users\AndersonAlves
 
 Ao acessar esta pasta, deverá ser criada uma pasta com o nome "data" e dentro dessa pasta deverá ser criada duas pastas com o nome "in" e "out". 
-Após a criação destas pastas, deve ser executada a aplicação e copiar o arquivo (como mostrado na seção "Dados de Exemplo") para a pasta "in" e o sistema identificará que houve uma modifição nesta pasta e começará o processo de leitura e processamento. No final da executação, haverá um arquivo dentro da pasta "out" com o nome do arquivo importado concatenado com o nome .done.dat. Caso tenho importado com arquivo com o nome "dados" para a pasta "in", o nome do arquivo final na pasta "out" será "dados.done.dat".
+Após a criação destas pastas, deve ser executada a aplicação e copiar o arquivo (como mostrado na seção "Dados de Exemplo" e no arquivo dados.dat na raiz da aplicação) para a pasta "in" e o sistema identificará que houve uma modifição nesta pasta e começará o processo de leitura e processamento. No final da executação, haverá um arquivo dentro da pasta "out" com o nome do arquivo importado concatenado com o nome .done.dat. Caso tenho importado com arquivo com o nome "dados" para a pasta "in", o nome do arquivo final na pasta "out" será "dados.done.dat".
 
 # Build da aplicação:
 Ao realizar o donwload da aplicação, a maquina deverá conter o gerenciador de dependencias Maven instalado e executar o seguinte comando:
